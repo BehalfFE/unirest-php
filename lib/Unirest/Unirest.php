@@ -206,7 +206,7 @@ class Unirest
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, Unirest::$verifyPeer);
         curl_setopt($ch, CURLOPT_ENCODING, ""); // If an empty string, "", is set, a header containing all supported encoding types is sent.
-        if (Unirest::$socketTimeout != null) {
+        if (Unirest::$socketTimeout !== null) {
             curl_setopt($ch, CURLOPT_TIMEOUT, Unirest::$socketTimeout);
         }
         if (!empty($username)) {
